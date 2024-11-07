@@ -1,20 +1,20 @@
 class contaBancaria {
-    nome: string;
-    saldo: number;
+    private nome: string;
+    private saldo: number;
 
-    constructor(titular:string, saldo:number = 0) {
-        this.nome = titular;
+    constructor(nome:string, saldo:number = 0) {
+        this.nome = nome;
         this.saldo = saldo;
     }
 
-    depositar(valor: number): number {
+    public depositar(valor: number): number {
         return this.saldo + this.depositar(valor);
     }
 
-    sacar(valor: number): number {
+    public sacar(valor: number): number {
         return this.saldo - this.sacar(valor);
     }
 }
 
-new contaBancaria("andré");
+const conta = new contaBancaria("andré");
 console.log(conta.depositar(100));
