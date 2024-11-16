@@ -7,10 +7,10 @@ interface LivroBiblioteca {
   
   
   class BibliotecaGestao implements LivroBiblioteca{
-      titulo: string;
-      autor: string;
-      genero: string;
-      disponivel: boolean;
+      titulo?: string;
+      autor?: string;
+      genero?: string;
+      disponivel?: boolean;
       livros: LivroBiblioteca[];
   
   
